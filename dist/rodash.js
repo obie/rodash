@@ -20,3 +20,11 @@ Array.prototype.mapBang = function(fn) {
 Array.prototype.toSentence = function() {
   return this.slice(0, this.length - 1).join(', ') + " and " + this.slice(-1);
 };
+
+Array.tryConvert = function(obj) {
+  if (obj instanceof Array) {
+    return obj;
+  } else {
+    return null;
+  }
+};

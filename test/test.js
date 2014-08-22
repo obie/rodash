@@ -5,6 +5,13 @@ require('../dist/rodash');
 assert = require('assert');
 
 describe('Array', function() {
+  describe('.tryConvert', function() {
+    return it('should return an array if passed an array', function() {
+      var array;
+      array = [1, 2];
+      return assert.equal(array, Array.tryConvert(array));
+    });
+  });
   describe('#map()', function() {
     return it('should invoke the given block once for each element and return a new array with the result', function() {
       return assert.deepEqual([2, 4, 6], [1, 2, 3].map(function(i) {
