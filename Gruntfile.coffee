@@ -9,7 +9,7 @@ module.exports = (grunt) ->
         options:
           bare: true
         files:
-          "dist/rodash.js": "src/*.coffee"
+          "dist/rodash.js": "src/*coffee"
           "test/test.js": "test/*.coffee"
 
     simplemocha:
@@ -24,7 +24,7 @@ module.exports = (grunt) ->
 
     watch:
       scripts:
-        files: [ "src/*.coffee", "test/*.coffee"]
+        files: [ "src/*coffee", "test/*.coffee"]
         tasks: ["coffee","simplemocha"]
 
 
