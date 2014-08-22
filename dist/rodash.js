@@ -2,16 +2,16 @@ var _;
 
 _ = require('lodash');
 
-Array.prototype.map = function(block) {
-  return _.map(this, block);
+Array.prototype.map = function(fn) {
+  return _.map(this, fn);
 };
 
-Array.prototype.mapBang = function(block) {
+Array.prototype.mapBang = function(fn) {
   var idx;
   idx = 0;
   return _.map(this, (function(_this) {
     return function(element) {
-      _this[idx] = block(element);
+      _this[idx] = fn(element);
       return idx++;
     };
   })(this));
