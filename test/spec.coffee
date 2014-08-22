@@ -3,6 +3,11 @@ require '../dist/rodash'
 assert = require 'assert'
 
 describe 'Array', ->
+  describe '.tryConvert', ->
+    it 'should return an array if passed an array', ->
+      array = [1,2]
+      assert.equal array, Array.tryConvert(array)
+
   describe '#map()', ->
     it 'should invoke the given block once for each element and return a new array with the result', ->
       assert.deepEqual [2,4,6], [1,2,3].map (i) -> i*2
