@@ -33,11 +33,16 @@ array.mapBang (i) -> i*2
 ```
 Boom! Now `array` contains `[2,4,6]`
 
-## ActiveSupport Emulation
+### ActiveSupport Emulation
 
-Want some english from your array?
+Want some english from your array? No oxford comma yet, though. (Send me a pull request!)
 
 ``` coffee
 ['coffee', 'milk', 'sugar'].toSentence()
 ```
 returns `"coffee, milk and sugar"`
+
+## Documentation
+
+This project is written using Literate Coffeescript. Just look at the source code to read the documentation.
+https://github.com/obie/rodash/blob/master/src/rodash.litcoffee
